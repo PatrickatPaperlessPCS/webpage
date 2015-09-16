@@ -1,0 +1,148 @@
+<%= form_for(@document) do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% @document.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CERTIFICATE OF MEDICAL NECESSITY - CMS-484 - OXYGEN</title>
+<link rel="stylesheet" type="text/css" href="fstyles.css" />
+</head>
+<body>
+  <center><div id="page1">
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td width="600" class="bbtm"> 
+  DEPARTMENT OF HEALTH AND HUMAN SERVICES<br/>CENTERS FOR MEDICARE &amp; MEDICAID SERVICES
+  </td>
+  <td width="168" class="ralgn bbtm">
+  Form Approved<br/>OMB No. 0938-0534
+  </td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+  <td class="rbtext">
+  DME 484.3 &nbsp; &nbsp; &nbsp;  
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="1" colspan="2" class="title">
+  CERTIFICATE OF MEDICAL NECESSITY<br/>CMS-484&mdash; OXYGEN
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead">
+  SECTION A: Certification Type/Date: INITIAL <input type="date" name="cms484[initial]" id="cms484_initial" /> 
+  REVISED <input type="date" name="cms484[revised]" id="cms484_revised"/>
+  RECERTIFICATION <input type="date" name="cms484[recert]" id="cms484_recert"/> 
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="334" class="ntext brt">
+  PATIENT NAME, ADDRESS, TELEPHONE and HICN
+  </td>
+  <td width="334" class="ntext">
+  SUPPLIER NAME, ADDRESS, TELEPHONE and NSC or NPI #
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext brt">
+  <input type="text" name="document[patient_name]" id="document_patient_name" class="ftext" size="40" placeholder="Name"/><br/>
+  <input type="text" name="cms484[patient_addr]" id="cms484_patient_addr" class="ftext" size="40" placeholder="Address"/><br/>
+  <input type="text" name="cms484[patient_city]" id="cms484_patient_city" class="ftext" size="10" placeholder="City"/> <input type="text" name="cms484[patient_state]" id="cms484_patient_state" class="ftext" size="10" placeholder="State"/> <input type="text" name="cms484[patient_zip]" id="cms484_patient_zip" class="ftext" size="10" placeholder="Zicms484ode"/>
+  </td>
+  <td class="ntext" valign="top">
+  <input type="text" name="cms484[supplier_name]" id="cms484_supplier_name" class="ftext" size="40" placeholder="Name"/><br/>
+  <input type="text" name="cms484[supplier_addr]" id="cms484_supplier_addr" class="ftext" size="40" placeholder="Address"/><br/>
+  <input type="text" name="cms484[supplier_city]" id="cms484_supplier_city" class="ftext" size="10" placeholder="City"/> <input type="text" name="cms484[supplier_state]" id="cms484_supplier_state" class="ftext" size="10" placeholder="State"/> <input type="text" name="cms484[supplier_zip]" id="cms484_supplier_zip" class="ftext" size="10" placeholder="Zip Code"/>
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext brt">
+  (<input type="text" name="cms484[patient_ph1]" id="cms484_patient_ph" size="3" maxlength="3" class="dshtext"/>) <input type="text" name="cms484[patient_ph2]" id="cms484_patient_ph2" size="3" maxlength="3" class="dshtext"/> - <input type="text" name="cms484[patient_ph3]" id="cms484_patient_ph3" size="4" maxlength="4" class="dshtext"/> &nbsp; HCN 
+  <input type="text" name="cms484[patient_hcn]" id="cms484_patient_hcn" size="15" class="text"/>
+  </td>
+  <td class="ntext">
+  (<input type="text" name="cms484[supplier_ph1]" id="cms484_supplier_ph1" size="3" maxlength="3" class="dshtext"/>) <input type="text" name="cms484[supplier_ph2]" id="cms484_supplier_ph2" size="3" maxlength="3" class="dshtext"/> - <input type="text" name="cms484[supplier_ph3]" id="cms484_supplier_ph3" size="4" maxlength="4" class="dshtext"/> &nbsp; NSC or NPI # 
+  <input type="text" name="cms484[supplier_nsc]" id="cms484_supplier_nsc" size="15" class="text"/>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="167" class="stext brt">
+  PLACE OF SERVICE <input type="text" name="cms484[place]" id="cms484_place" size="10" class="text"/>
+  </td>
+  <td width="161" class="stext brt">
+  <span class="lsp">Supply Item/Service Procedure Code(s):</span>
+  </td>
+  <td width="334" class="stext">
+  <span class="lsp">PT DOB <input type="date" name="cms484[patient_dob]" id="cms484_patient_dob"/> 
+  Sex <input type="text" name="cms484[patient_sex]" id="cms484_patient_sex" size="1" class="text"/> (M/F)  Ht <input type="text" name="cms484[patient_ht]" id="cms484_patient_ht" size="2" class="text"/> (in)  
+  Wt <input type="text" name="cms484[patient_wt]" id="cms484_patient_wt" size="2" class="text"/></span>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt btop" valign="top">NAME and ADDRESS of FACILITY
+if applicable (see reverse)<br/>
+  <input type="text" name="cms484[facility_name]" id="cms484_facility_name" class="ftext" size="20" placeholder="Name"/><br/>
+  <input type="text" name="cms484[facility_addr]" id="cms484_facility_addr" class="ftext" size="20" placeholder="Address"/><br/>
+  <input type="text" name="cms484[facility_city]" id="cms484_facility_city" class="ftext" size="20" placeholder="City"/><br/>
+  <input type="text" name="cms484[facility_state]" id="cms484_facility_state" class="ftext" size="2" placeholder="State"/> <input type="text" name="cms484[facility_zip]" id="cms484_facility_zip" class="ftext" size="10" placeholder="Zip Code"/>
+  </td>
+  <td class="stext brt btop" valign="top">
+  <input type="text" name="cms484[supply_service1]" id="cms484_supply_service1" class="ftext" size="20"/>
+  <input type="text" name="cms484[supply_service2]" id="cms484_supply_service2" class="ftext" size="20"/>
+  <input type="text" name="cms484[supply_service3]" id="cms484_supply_service3" class="ftext" size="20"/><input type="text" name="cms484[supply_service4]" id="cms484_supply_service4" class="ftext" size="20"/>
+  <input type="text" name="cms484[supply_service5]" id="cms484_supply_service5" class="ftext" size="20"/>
+  </td>
+  <td class="stext btop"> &nbsp; &nbsp; PHYSICIAN NAME, ADDRESS, TELEPHONE and UPIN or NPI #<br/>
+  <input type="text" name="cms484[phys_name]" id="cms484_phys_name" class="ftext" size="40" placeholder="Name"/><br/>
+  <input type="text" name="cms484[phys_addr]" id="cms484_phys_addr" class="ftext" size="40" placeholder="Address"/><br/>
+  <input type="text" name="cms484[phys_city]" id="cms484_phys_city" class="ftext" size="10" placeholder="City"/> <input type="text" name="cms484[phys_state]" id="cms484_phys_state" class="ftext" size="10" placeholder="State"/> <input type="text" name="cms484[phys_zip]" id="cms484_phys_zip" class="ftext" size="10" placeholder="Zicms484ode"/><br/>&nbsp;<br/>
+  (<input type="text" name="cms484[phys_ph1]" id="cms484_phys_ph1" size="3" maxlength="3" class="dshtext"/>) <input type="text" name="cms484[phys_ph2]" id="cms484_phys_ph2" size="3" maxlength="3" class="dshtext"/> - <input type="text" name="cms484[phys_ph3]" id="cms484_phys_ph3" size="4" maxlength="4" class="dshtext"/> &nbsp; UPIN or NPI # 
+  <input type="text" name="cms484[phys_npi]" id="cms484_phys_npi" size="15" class="text"/>
+  </td>
+  </tr>
+  </table>
+  <BR>
+<table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead bbtm1">
+  SECTION C: Narrative Description of Equipment and Cost
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  (1) Narrative description of all items, accessories and option ordered; (2) Suppliers charge; and (3) Medicare Fee Schedule Allowance for each item, accessory, and option (see instructions on back)<br/>
+  <%= f.text_area :narrative, cols: 120, :class => 'text' %><br/>
+  </td>
+  </tr>
+  </table>
+  
+  </table>
+    <div class="center">
+    <h3><%= f.label "Your email address" %><br></h3>
+    <%= f.text_field :recipient %>
+<br><br>
+    <%= f.submit "Send Document" %>
+  </div>
+  </div>
+
+
+
+<% end %>
+

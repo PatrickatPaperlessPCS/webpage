@@ -1,0 +1,692 @@
+<%= form_for(@document) do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% @cms484.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CERTIFICATE OF MEDICAL NECESSITY - CMS-484 - OXYGEN</title>
+<link rel="stylesheet" type="text/css" href="\assets\fstyles.css" />
+<link href="\assets\jquery.signaturepad.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="\assets\flashcanvas.js"></script><![endif]-->
+
+</head>
+<script src="content/bootstrapJS/jquery-2.1.1.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+            $(window).ready(function(){
+                $('#myModal').modal('show');
+            });
+        </script>
+<body>
+  <div id="page1">
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td width="600" class="bbtm"> 
+  DEPARTMENT OF HEALTH AND HUMAN SERVICES<br/>CENTERS FOR MEDICARE &amp; MEDICAID SERVICES
+  </td>
+  <td width="168" class="ralgn bbtm">
+  Form Approved<br/>OMB No. 0938-0534
+  </td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+  <td class="rbtext">
+  DME 484.3 &nbsp; &nbsp; &nbsp;  
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="1" colspan="2" class="title">
+  CERTIFICATE OF MEDICAL NECESSITY<br/>CMS-484&mdash; OXYGEN
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead">
+  SECTION A: Certification Type/Date: INITIAL 10/12/2011 
+  REVISED 10/15/2012
+  RECERTIFICATION 10/15/2013
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="334" class="ntext brt">
+  PATIENT NAME, ADDRESS, TELEPHONE and HICN
+  </td>
+  <td width="334" class="ntext">
+  SUPPLIER NAME, ADDRESS, TELEPHONE and NSC or NPI #
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext brt">
+  <%= @document.patient_name %><br/>
+  Patient Address <br/>
+  <span class="tbox">Patient City</span> <span class="tbox">AK</span> <span class="tbox">11111</span>
+  </td>
+  <td class="ntext" valign="top">
+  Supplier Name<br/>
+  Supplier Address<br/>
+  <span class="tbox">Supplier City</span>
+  <span class="tbox">AK</span>
+  <span class="tbox">11111</span>
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext brt">
+  (000) 000 - 0000 &nbsp; HCN 
+  123-45-6789-A
+  </td>
+  <td class="ntext">
+  (000) 000 - 0000 &nbsp; NSC or NPI # 
+  8675309
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="167" class="stext brt">
+  PLACE OF SERVICE 
+  </td>
+  <td width="161" class="stext brt">
+  <span class="lsp">Supply Item/Service Procedure Code(s):</span>
+  </td>
+  <td width="334" class="stext">
+  <span class="lsp">PT DOB 10/10/1900 
+  Sex M (M/F)  Ht 62 (in)  
+  Wt 189</span>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt btop" valign="top">NAME and ADDRESS of FACILITY
+if applicable (see reverse)
+<br/><strong>
+  <br/>
+  <br/>
+  </strong>
+  </td>
+<td class="stext brt btop" valign="top">
+  00000<br/>
+  00000<br/>
+  00000<br/>
+  00000<br/>
+  00000<br/>
+    </td>
+  <td class="stext btop"> &nbsp; &nbsp; PHYSICIAN NAME, ADDRESS, TELEPHONE and UPIN or NPI #<br/>
+  Physician Name<br/>
+  Physician Address<br/>
+  City, AK 00000 <br/>&nbsp;<br/>
+  (000) 000 - 0000 &nbsp; UPIN or NPI # 
+  0000000-0
+  </td>
+  </tr>
+  </table>
+SECTION B: Information in this Section May Not Be Completed by the Supplier of the Items/Supplies.
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead">
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="334" class="stext brt">
+  EST. LENGTH OF NEED (# OF MONTHS): <input type="text" name="cms484[est_month]" id="cms484_est_month" size="2" class="text" autofocus="true"/> 1-99 (99=LIFETIME)
+  </td>
+  <td width="334" class="stext">
+  DIAGNOSIS CODES: <input type="text" name="cms484[diag_codes1]" id="cms484_diag_codes1" size="4" class="dshtext"/>
+  <input type="text" name="cms484[diag_codes2]" id="cms484_diag_codes2" size="4" class="dshtext"/>
+  <input type="text" name="cms484[diag_codes3]" id="cms484_diag_codes3" size="4" class="dshtext"/>
+  <input type="text" name="cms484[diag_codes4]" id="cms484_diag_codes4" size="4" class="dshtext"/>
+  <input type="text" name="cms484[diag_codes5]" id="cms484_diag_codes5" size="4" class="dshtext"/>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="168" class="stext brt bbtm1">
+  ANSWERS
+  </td>
+  <td width="600" class="stext bbtm1">
+  ANSWER QUESTIONS 1-9. (Check Y for Yes, N for No, or D for Does Not Apply, unless otherwise noted.)
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  a) <input type="text" name="cms484[blood_gas]" id="cms484_blood_gas" size="3" class="text"/> mm Hg<br/>
+  b) <input type="text" name="cms484[oxy_sat]" id="cms484_oxy_sat" size="5" class="text"/> %<br/>
+  c)  <input type="date" name="cms484[test_mm]" id="cms484_test_mm" size="2" class="text"/>
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    1.
+    </td>
+    <td width="585" class="stext">
+    Enter the result of most recent test taken on or before the certification date listed in Section A. Enter (a) arterial blood gas PO2 and/or (b) oxygen saturation test; (c) date of test.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <input type="checkbox"> 1 &nbsp;
+  <input type="checkbox"> 2 &nbsp;
+  <input type="checkbox"> 3
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    2.
+    </td>
+    <td width="585" class="stext">
+    Was the test in Question 1 performed (1) with the patient in a chronic stable state as an outpatient, (2) within two days prior to discharge from an inpatient facility to home, or (3) under other circumstances?
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <input type="checkbox"> 1 &nbsp;
+  <input type="checkbox"> 2 &nbsp;
+  <input type="checkbox"> 3
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    3.
+    </td>
+    <td width="585" class="stext">
+    Check the one number for the condition of the test in Question 1: (1) At Rest; (2) During Exercise; (3) During Sleep
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <input type="checkbox"> Y &nbsp;
+  <input type="checkbox"> N &nbsp;
+  <input type="checkbox"> D
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    4.
+    </td>
+    <td width="585" class="stext">
+    If you are ordering portable oxygen, is the patient mobile within the home? If you are not ordering portable oxygen, check D.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <input type="text" name="cms484[lpm]" id="cms484_lpm" size="5" class="text"/> LPM
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    5.
+    </td>
+    <td width="585" class="stext">
+    Enter the highest oxygen flow rate ordered for this patient in liters per minute. If less than 1 LPM,enter an &rdquo;X&rdquo;.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt">
+  a) <input type="text" name="cms484[lpm_gas]" id="cms484_lpm_gas" size="3" class="text"/> mm Hg<br/>
+  b) <input type="text" name="cms484[lpm_sat]" id="cms484_lpm_sat" size="5" class="text"/> %<br/>
+  c)  <input type="date" name="cms484[ltest_mm]" id="cms484_ltest_mm" size="2" class="text"/>
+  </td>
+  <td class="stext">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    6.
+    </td>
+    <td width="585" class="stext">
+    If greater than 4 LPM is prescribed, enter results of most recent test taken on 4 LPM. This may be an (a) arterial blood gas PO2 and/or (b) oxygen saturation test with patient in a chronic stable state. Enter date of test (c).
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td rowspan="1" colspan="2" class="ntext1 bbtm1">
+  ANSWER QUESTIONS 79 ONLY IF PO2 = 56-59 OR OXYGEN SATURATION = 89 IN QUESTION 1
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" width="168">
+  <input type="checkbox"> Y &nbsp;
+  <input type="checkbox"> N
+  </td>
+  <td class="stext" width="600">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    7.
+    </td>
+    <td width="585" class="stext">
+    Does the patient have dependent edema due to congestive heart failure?
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  <input type="checkbox"> Y &nbsp;
+  <input type="checkbox"> N
+  </td>
+  <td class="stext">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    8.
+    </td>
+    <td width="585" class="stext">
+    Does the patient have cor pulmonale or pulmonary hypertension documented by P pulmonale on an EKG or by an echocardiogram, gated blood pool scan or direct pulmonary artery pressure measurement.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  <input type="checkbox"> Y &nbsp;
+  <input type="checkbox"> N
+  </td>
+  <td class="stext">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    9.
+    </td>
+    <td width="585" class="stext">
+    Does the patient have a hematocrit greater than 56%?
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="ntext">
+  NAME OF PERSON ANSWERING SECTION B QUESTIONS, IF OTHER THAN PHYSICIAN (Please Print):
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  NAME <input type="text" name="cms484[person_name]" id="cms484_person_name" size="25" class="text"/> &nbsp;
+  TITLE <input type="text" name="cms484[person_title]" id="cms484_person_title" size="15" class="text"/> &nbsp;
+  EMPLOYER <input type="text" name="cms484[person_emp]" id="cms484_person_emp" size="25" class="text"/>
+  </td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead bbtm1">
+  SECTION C: Narrative Description of Equipment and Cost
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  (1) Narrative description of all items, accessories and option ordered; (2) Suppliers charge; and (3) Medicare Fee Schedule Allowance for each item, accessory, and option (see instructions on back)<br/>
+  <strong> <%= @document.narrative %> </strong> <br/>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead bbtm1">
+  SECTION D: PHYSICIAN Attestation and Signature/Date
+  </td>
+  </tr>
+  <tr>
+  <td class="stext1">
+  I certify that I am the treating physician identified in Section A of this form. I have received Sections A, B and C of the Certificate of Medical Necessity (including charges for items ordered). Any statement on my letterhead attached hereto, has been reviewed and signed by me. I certify that the medical necessity information in Section B is true, accurate and complete, to the best of my knowledge, and I understand that any falsification, omission, or concealment of material fact in that section may subject me to civil or criminal liability.
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <table width="763" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="545" class="ntext">PHYSICIAN&rsquo;S SIGNATURE<br/>
+
+  <form method="post" action="" class="sigPad">
+
+    <ul class="sigNav">
+      <li class="drawIt"><a href="#draw-it" >Draw It</a></li>
+      <li class="clearButton"><a href="#clear">Clear</a></li>
+    </ul>
+    <div class="sig sigWrapper">
+      <div class="typed"></div>
+      <canvas class="pad" width="198" height="55" ></canvas>
+      <input type="hidden" name="output" class="output">
+    </div>
+    <b> <align="center"> Please sign in the space provided below </b>
+  </form>
+
+  <script src="\assets\jquery.signaturepad.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sigPad').signaturePad({drawOnly:true});
+    });
+  </script>
+  
+<br/>
+    
+    <b>Signature and Date Stamps Are Not Acceptable.</b>
+    </td>
+    <td width="218" class="ntext" valign="top">
+    DATE <input type="date" name="cms484[frm_mm]" id="cms484_frm_mm" class="text" />
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td class="stext">
+  Form cms-484 (11/11)
+  </td>
+  </tr>
+    </table>
+
+
+<div class="center">
+<h2><i> Signing Physician:</i></h2> <h3> To complete and submit, type your first and last name here: </h3>
+<div class="sigPad">
+      <input type="text" class="ftext" size="20"/>
+     Credentials: <select>
+  <option value="#">MD</option>
+  <option value="#">DO</option>
+</select>
+
+    <h3> Then, sign here </h3>
+    <div class="sig sigWrapper">
+      <canvas class="pad" width="698" height="100" ></canvas>
+      <%= f.hidden_field :signature, class: "output" %>
+    <ul class="sigNav">
+      <li class="clearButton"><a href="#clear">Clear Signature</a></li>
+    </ul>
+  </div>
+<br>
+  <script src="\assets\json2.min.js"></script>
+  <tbody>
+<br><br>
+<div class="actions">
+  <input id="gobutton" type="submit" name="commit" value="Done!" />
+  </div>
+</div> 
+  </tbody>
+
+</div>
+  <div id="instructions"
+  <div id="page1">
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr1">
+  <tr>
+  <td class="title">
+  INSTRUCTIONS FOR COMPLETING THE CERTIFICATE OF MEDICAL NECESSITY FOR OXYGEN
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td width="168" class="stext">
+  <b>SECTION A:</b>
+  </td>
+  <td width="600" class="stext">
+  <b>(May be completed by the supplier)</b>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  CERTIFICATION<br/>DATE:
+  </td>
+  <td class="stext">
+  If this is an initial certification for this patient, indicate this by placing date (MM/DD/YY) needed initially in the space TYPE/marked "INITIAL." If this is a revised certification (to be completed 
+  when the physician changes the order, based on the patient's changing clinical needs), indicate the initial date needed in the space marked "INITIAL," and indicate the recertification date in the 
+  space marked "REVISED." If this is a recertification, indicate the initial date needed in the space marked "INITIAL," and indicate the recertification date in the space marked "RECERTIFICATION." 
+  Whether submitting a REVISED or a RECERTIFIED CMN, be sure to always furnish the INITIAL date as well as the REVISED or RECERTIFICATION date.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PATIENT<br/>INFORMATION:
+  </td>
+  <td class="stext">
+  Indicate the patient's name, permanent legal address, telephone number and his/her health insurance claim number (HICN) as it appears on his/her Medicare card and on the claim form.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  SUPPLIER<br/>INFORMATION:
+  </td>
+  <td class="stext">
+  Indicate the name of your company (supplier name), address and telephone number along with the Medicare Supplier Number assigned to you by the National Supplier 
+  Clearinghouse (NSC) or applicable National Provider Identifier (NPI). If using the NPI Number, indicate this by using the qualifier XX followed by the 10-digit number. If using a 
+  legacy number, e.g. NSC number, use the qualifier 1C followed by the 10-digit number. (For example. 1Cxxxxxxxxxx)
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PLACE OF SERVICE:
+  </td>
+  <td class="stext">
+  Indicate the place in which the item is being used, i.e., patient's home is 12, skilled nursing facility (SNF) is 31, End Stage Renal Disease (ESRD) facility is 65, etc. Refer to the 
+  DMERC supplier manual for a complete list.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  FACILITY NAME:
+  </td>
+  <td class="stext">
+  If the place of service is a facility, indicate the name and complete address of the facility.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  SUPPLY ITEM/SERVICE<br/>PROCEDURE CODE(S):
+  </td>
+  <td class="stext">
+  List all procedure codes for items ordered. Procedure codes that do not require certification should not be listed on the CMN.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PATIENT DOB, HEIGHT,<br/>WEIGHT AND SEX:
+  </td>
+  <td class="stext" valign="top">
+  Indicate patient's date of birth (MM/DD/YY) and sex (male or female); height in inches and weight in pounds, if requested.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PHYSICIAN NAME,<br/>ADDRESS:
+  </td>
+  <td class="stext" valign="top">
+  Indicate the PHYSICIAN'S name and complete mailing address.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PHYSICIAN<br/>INFORMATION:
+  </td>
+  <td class="stext">
+  Accurately indicate the treating physician's Unique Physician Identification Number (UPIN) or applicable National Provider Identifier (NPI). If using the NPI Number, 
+  indicate this by using the qualifier XX followed by the 10-digit number.If using UPIN number, use the qualifier 1G followed by the 6-digit number. (For example. 1Gxxxxxx)
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PHYSICIAN'S<br/>TELEPHONE NO:
+  </td>
+  <td class="stext">
+  Indicate the telephone number where the physician can be contacted (preferably where records would be accessible pertaining to this patient) if more information is needed.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  <b>SECTION B:</b>
+  </td>
+  <td class="stext">
+  <b>(May not be completed by the supplier. While this section may be completed by a non-physician clinician, or a Physician employee, it must be reviewed, and the 
+  CMN signed (in Section D) by the treating practitioner.)</b>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  EST. LENGTH OF NEED:
+  </td>
+  <td class="stext">
+  Indicate the estimated length of need (the length of time the physician expects the patient to require use of the ordered item) by filling in the appropriate 
+  number of months. If the patient will require the item for the duration of his/her life, then enter "99".
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  DIAGNOSIS CODES:
+  </td>
+  <td class="stext">
+  In the first space, list the diagnosis code that represents the primary reason for ordering this item. List any additional diagnosis codes that would further describe the 
+  medical need for the item (up to 4 codes).
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  QUESTION SECTION:
+  </td>
+  <td class="stext">
+  This section is used to gather clinical information to help Medicare determine the medical necessity for the item(s) being ordered. Answer each question which 
+  applies to the items ordered, checking "Y" for yes, "N" for no, or "D" for does not apply.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  NAME OF PERSON<br/>ANSWERING SECTION B<br/>QUESTIONS:
+  </td>
+  <td class="stext">
+  If a clinical professional other than the treating physician (e.g., home health nurse, physical therapist, dietician) or a physician employee answers the questions 
+  of Section B, he/she must print his/her name, give his/her professional title and the name of his/her employer where indicated. If the physician is answering the questions, 
+  this space may be left blank.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  <b>SECTION C:</b>
+  </td>
+  <td class="stext">
+  <b>(To be completed by the supplier)</b>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  NARRATIVE<br/>DESCRIPTION OF<br/>EQUIPMENT &amp; COST:
+  </td>
+  <td class="stext">
+  Supplier gives (1) a narrative description of the item(s) ordered, as well as all options, accessories, supplies and drugs; (2) the supplier's charge for each item(s), options, 
+  accessories, supplies and drugs; and (3) the Medicare fee schedule allowance for each item(s), options, accessories, supplies and drugs, if applicable.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  <b>SECTION D:</b>
+  </td>
+  <td class="stext">
+  <b>(To be completed by the physician)</b>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PHYSICIAN<br/>ATTESTATION:
+  </td>
+  <td class="stext">
+  The physician's signature certifies (1) the CMN which he/she is reviewing includes Sections A, B, C and D; (2) the answers in Section B are correct; and (3) the self-identifying information in Section A is correct.
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" valign="top">
+  PHYSICIAN SIGNATURE<br/>AND DATE:
+  </td>
+  <td class="stext">
+  After completion and/or review by the physician of Sections A, B and C, the physician's must sign and date the CMN in Section D, verifying the Attestation appearing in this Section. 
+  The physician's signature also certifies the items ordered are medically necessary for this patient.
+  </td>
+  </tr>
+  </table><br/>&nbsp;<br/>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr1">
+  <tr>
+  <tr>
+  <td class="stext">
+  According to the Paperwork Reduction Act of 1995, no persons are required to respond to a collection of information unless it displays a valid OMB control number. The valid OMB control number for this information collection is 0938-0679. The time required to complete this information collection is estimated to average 12 minutes per response, including the time to review instructions, search existing resources, gather the data needed, and complete and review the information collection. If you have any comments concerning the accuracy of the time estimate or suggestions for improving this form, please write to: CMS, Attn: PRA Reports Clearance Officer, 7500 Security Blvd. Baltimore, Maryland 21244.
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext1">
+  <b>DO NOT SUBMIT CLAIMS TO THIS ADDRESS. Please see <a href="http://www.medicare.gov/" target="_blank">http://www.medicare.gov/</a> for information on claim filing.</b>
+  </td>
+  </tr>
+  </table><table width="768" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td class="stext1">
+  Form CMS-484 (11/11) INSTRUCTIONS
+  </td>
+  </tr>
+  </table>
+  </div>
+</div>
+  </body>
+  </div>
+  <% end %>
+
+
+<div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
+</html>
+
+
+
+<%= link_to 'Show', @document %> |
+<%= link_to 'Back', documents_path %>

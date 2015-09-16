@@ -1,0 +1,416 @@
+<p id="notice"><%= notice %></p>
+<%= form_for(@document) do |f| %>
+  <% end %>
+  <!DOCTYPE html>
+<html>
+<head>
+<title>CERTIFICATE OF MEDICAL NECESSITY - CMS-484 - OXYGEN</title>
+<link href="\assets\jquery.signaturepad.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="\assets\fstyles.css" />
+
+  <!--[if lt IE 9]><script src="\assets\flashcanvas.js"></script><![endif]-->
+  <meta name="pdfkit-page_size" content="Letter"/>
+  <meta name: "pdfkit-margin_top", content: "0.5in" />
+  <meta name: "pdfkit-margin_right", content: "0.5in" />
+  <meta name: "pdfkit-margin_bottom", content: "0.5in" />
+  <meta name: "pdfkit-margin_left", content: "0.5in" />
+</head>
+<body>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">A completed sample document</h4>
+      </div>
+      <div class="modal-body">
+        <p>All documents are downloadable or printable in PDF. </br> We keep them in the server for 90 days so you'll have plenty of time to download it.</p>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary" href="/">I'm done looking!</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  <div id="page1">
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td width="600" class="bbtm"> 
+  DEPARTMENT OF HEALTH AND HUMAN SERVICES<br/>CENTERS FOR MEDICARE &amp; MEDICAID SERVICES
+  </td>
+  <td width="168" class="ralgn bbtm">
+  Form Approved<br/>OMB No. 0938-0534
+  </td>
+  </tr>
+  <tr>
+  <td>&nbsp;</td>
+  <td class="rbtext">
+  DME 484.3 &nbsp; &nbsp; &nbsp;  
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="1" colspan="2" class="title">
+  CERTIFICATE OF MEDICAL NECESSITY<br/>CMS-484&mdash; OXYGEN
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead">
+  SECTION A: Certification Type/Date: INITIAL <strong>10/15/2011</strong>
+  REVISED <strong>11/15/2012</strong>
+  RECERTIFICATION <strong>12/15/2013</strong> 
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="334" class="ntext brt">
+  PATIENT NAME, ADDRESS, TELEPHONE and HICN
+  </td>
+  <td width="334" class="ntext">
+  SUPPLIER NAME, ADDRESS, TELEPHONE and NSC or NPI #
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext brt">
+  <%= @document.patient_name %><br/>
+  1212 Any Street <br/>
+  <span class="tbox">Everywhere</span> <span class="tbox">AK</span> <span class="tbox">11111</span>
+  </td>
+  <td class="ntext" valign="top">
+  Local Supplier<br/>
+  Supplier Address<br/>
+  <span class="tbox">Your City</span>
+  <span class="tbox">Your State</span>
+  <span class="tbox">11111</span>
+  </td>
+  </tr>
+  <tr>
+  <td class="ntext brt">
+  (000) 444 - 1234 &nbsp; HCN 
+  758-69-4502-C
+  </td>
+  <td class="ntext">
+  (101) 555 - 1234 &nbsp; NSC or NPI # 
+  86-11-4512121A
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="167" class="stext brt">
+  PLACE OF SERVICE Doctor's office
+  </td>
+  <td width="199" class="stext brt">
+  <span class="lsp">Supply Item/Service Procedure Code(s):</span>
+  </td>
+  <td width="334" class="stext">
+  <span class="lsp">PT DOB 10/1/1900 
+  Sex M (M/F)  Ht 62 (in)  
+  Wt 189 </span>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt btop" valign="top">NAME and ADDRESS of FACILITY
+if applicable (see reverse)<br/>
+<br/>
+  <br/>
+  <br/>
+  </td>
+<td class="stext brt btop" valign="top">
+  85064 <br/>
+  85065 <br/>
+  85066 <br/>
+  85067 <br/>
+  85068  </td>
+  <td class="stext btop"> &nbsp; &nbsp; PHYSICIAN NAME, ADDRESS, TELEPHONE and UPIN or NPI #
+
+  Referring Physician<br/>
+  1234 Any Way<br/>
+  Whoville, AK 86053<br/>&nbsp;
+  (888) 867 - 5309 &nbsp; UPIN or NPI # 
+  58590031-2
+  </td>
+  </tr>
+  </table>
+  
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead">
+  SECTION B: Information in this Section May Not Be Completed by the Supplier of the Items/Supplies.
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="334" class="stext brt">
+  EST. LENGTH OF NEED (# OF MONTHS): 99 1-99 (99=LIFETIME)
+  </td>
+  <td width="334" class="stext">
+  DIAGNOSIS CODES: 90345
+  93045
+	93045
+93045  93045
+  </td>
+  </tr>
+  </table>
+   <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td width="168" class="stext brt bbtm1">
+  ANSWERS
+  </td>
+  <td width="600" class="stext bbtm1">
+  ANSWER QUESTIONS 1-9. (Check Y for Yes, N for No, or D for Does Not Apply, unless otherwise noted.)
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  a) 00 mm Hg<br/>
+  b) 99 %<br/>
+  c)  10/14/2011
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    1.
+    </td>
+    <td width="585" class="stext">
+    Enter the result of most recent test taken on or before the certification date listed in Section A. Enter (a) arterial blood gas PO2 and/or (b) oxygen saturation test; (c) date of test.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <strong>X</strong>  &nbsp;1 &nbsp;
+  <input type="radio">  &nbsp;2 &nbsp;
+  <input type="radio"> &nbsp;3
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    2.
+    </td>
+    <td width="585" class="stext">
+    Was the test in Question 1 performed (1) with the patient in a chronic stable state as an outpatient, (2) within two days prior to discharge from an inpatient facility to home, or (3) under other circumstances?
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <strong>X</strong>  &nbsp;1 &nbsp;
+  <input type="radio">  &nbsp;2 &nbsp;
+  <input type="radio"> &nbsp;3
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    3.
+    </td>
+    <td width="585" class="stext">
+    Check the one number for the condition of the test in Question 1: (1) At Rest; (2) During Exercise; (3) During Sleep
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  <strong>X</strong> Y &nbsp;
+   N &nbsp;
+   D
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    4.
+    </td>
+    <td width="585" class="stext">
+    If you are ordering portable oxygen, is the patient mobile within the home? If you are not ordering portable oxygen, check D.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt bbtm1">
+  5 LPM
+  </td>
+  <td class="stext bbtm1">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    5.
+    </td>
+    <td width="585" class="stext">
+    Enter the highest oxygen flow rate ordered for this patient in liters per minute. If less than 1 LPM,enter an &rdquo;X&rdquo;.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext brt">
+  a) 00 mm Hg<br/>
+  b) 000 %<br/>
+  c)  10/15/2011
+  </td>
+  <td class="stext">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    6.
+    </td>
+    <td width="585" class="stext">
+    If greater than 4 LPM is prescribed, enter results of most recent test taken on 4 LPM. This may be an (a) arterial blood gas PO2 and/or (b) oxygen saturation test with patient in a chronic stable state. Enter date of test (c).
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td rowspan="1" colspan="2" class="ntext1 bbtm1">
+  ANSWER QUESTIONS 79 ONLY IF PO2 = 56-59 OR OXYGEN SATURATION = 89 IN QUESTION 1
+  </td>
+  </tr>
+  <tr>
+  <td class="stext" width="168">
+  <strong>X</strong> Y &nbsp;
+  <input type="radio"> N
+  </td>
+  <td class="stext" width="600">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    7.
+    </td>
+    <td width="585" class="stext">
+    Does the patient have dependent edema due to congestive heart failure?
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  <strong>X</strong> Y &nbsp;
+  <input type="radio"> N
+  </td>
+  <td class="stext">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    8.
+    </td>
+    <td width="585" class="stext">
+    Does the patient have cor pulmonale or pulmonary hypertension documented by P pulmonale on an EKG or by an echocardiogram, gated blood pool scan or direct pulmonary artery pressure measurement.
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  <strong>X</strong> Y &nbsp;
+  <input type="radio"> N
+  </td>
+  <td class="stext">
+    <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="15" class="stext" valign="top">
+    9.
+    </td>
+    <td width="585" class="stext">
+    Does the patient have a hematocrit greater than 56%?
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="ntext">
+  NAME OF PERSON ANSWERING SECTION B QUESTIONS, IF OTHER THAN PHYSICIAN (Please Print):
+  </td>
+  </tr>
+<tr>
+  <td class="stext">
+    <table class="equal-three-col">
+      <tr>
+        <td>
+          NAME James Brown, MD
+        </td>
+        <td>
+          TITLE Physician
+        </td>
+        <td>
+          EMPLOYER Private Practice
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead bbtm1">
+  SECTION C: Narrative Description of Equipment and Cost
+  </td>
+  </tr>
+  <tr>
+  <td class="stext">
+  (1) Narrative description of all items, accessories and option ordered; (2) Suppliers charge; and (3) Medicare Fee Schedule Allowance for each item, accessory, and option (see instructions on back)<br/>
+  <strong><%= @document.narrative %></strong><br/>
+  </td>
+  </tr>
+  </table>
+  <table width="768" align="center" cellpadding="0" cellspacing="0" border="0" class="tbdr">
+  <tr>
+  <td class="shead bbtm1">
+  SECTION D: PHYSICIAN Attestation and Signature/Date
+  </td>
+  </tr>
+  <tr>
+  <td class="stext1">
+  I certify that I am the treating physician identified in Section A of this form. I have received Sections A, B and C of the Certificate of Medical Necessity (including charges for items ordered). Any statement on my letterhead attached hereto, has been reviewed and signed by me. I certify that the medical necessity information in Section B is true, accurate and complete, to the best of my knowledge, and I understand that any falsification, omission, or concealment of material fact in that section may subject me to civil or criminal liability.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <table width="763" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+    <td width="545" class="ntext">PHYSICIAN&rsquo;S SIGNATURE<br/>
+  <div id="signature">
+  <div class="sigshow sigWrappershow">
+    <canvas class="padShow" width="540" height="100"></canvas>
+  </div>
+</div>
+<script type="text/javascript">
+$(function() {
+  renderSignature(<%= @document.signature.to_json.html_safe %>, 'div#signature');
+});
+</script>
+</p>
+
+    <b>Signature and Date Stamps Are Not Acceptable.</b>
+    </td>
+    <td width="218" class="ntext" valign="top">
+    DATE <strong> Electronically Signed by: James Brown, MD
+    <%= @document.updated_at %></strong>
+    </td>
+    </tr>
+    </table>
+  </td>
+  </tr>
+  </table>
+  </div>
+ </html>

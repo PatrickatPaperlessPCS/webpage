@@ -1,0 +1,197 @@
+#page1{
+	margin:0px auto;
+	padding:0px 0px 10px 0px;
+	float:center;
+	clear:both;
+	font-family:Arial,sans-serif;
+	color:#000000;
+	background-color: #FFF;
+	width:775px;
+    border-style: solid;
+    border-width: 2px;;
+	}
+	
+#page1 td{
+	font-size:11px;
+	padding:0px;
+	margin:0px;
+	line-height:16px;
+	text-align:left;
+	}
+	
+#page1 td.ralgn{
+	text-align:right;
+	}
+	
+#page1 td.calgn{
+	text-align:center;
+	}
+	
+#page1 td.bbtm{
+	border-bottom:2px solid #000000;
+	padding-bottom:5px;
+	}
+
+#page1 td.bbtm1{
+	border-bottom:1px solid #000000;
+	padding-bottom:5px;
+	}
+	
+#page1 td.rbtext{
+	text-align:right;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:5px;
+	}
+#page1 td.brt{
+	border-right:1px solid #000000;
+	}
+	
+#page1 td.btop{
+	border-top:1px solid #000000;
+	}
+	
+#page1 td.title{
+	text-align:center;
+	padding:5px 0px;
+	font-size:20px;
+	line-height:24px;
+	}
+	
+#page1 td.shead{
+	font-size:14px;
+	padding:3px;
+	margin:0px;
+	line-height:20px;
+	text-align:left;
+	font-weight:bold;
+	}
+	
+#page1 td.ntext{
+	font-size:12px;
+	padding:3px 3px;
+	margin:0px;
+	line-height:18px;
+	text-align:left;
+	}
+	
+#page1 td.ntext1{
+	font-size:12px;
+	padding:3px 3px;
+	margin:0px;
+	line-height:18px;
+	text-align:center;
+	}
+	
+#page1 td.stext{
+	font-size:11px;
+	padding:3px 2px;
+	margin:0px;
+	line-height:16px;
+	text-align:left;
+	}
+	
+#page1 td.stext1{
+	font-size:11px;
+	padding:3px 5px;
+	margin:0px;
+	line-height:16px;
+	text-align:left;
+	}
+
+.tbdr{
+	border:1px solid #000000;
+	}
+	
+.tbdr1{
+	border-top:2px solid #000000;
+	border-bottom:2px solid #000000;
+	}
+.text {
+	background-color: #f2e5a8;
+	}
+	
+#page1 td input.text{
+	font-family:Arial,sans-serif;
+	color:#000000;
+	padding:0px;
+	margin:0px;
+	border:none;
+	border-bottom:1px solid #000000;
+	font-size:12px;
+	background-color: #f2e5a8;
+	}
+	
+#page1 td input.dshtext{
+	font-family:Arial,sans-serif;
+	color:#000000;
+	padding:0px;
+	margin:0px;
+	border:none;
+	border-bottom:1px dashed #000000;
+	font-size:12px;
+	background-color: #f2e5a8;
+	}
+	
+#page1 td input.ftext{
+	font-family:Arial,sans-serif;
+	color:#000000;
+	background-color: #f2e5a8;
+	padding:0px;
+	margin:0px;
+	
+	font-size:12px;
+	}
+	
+#page1 td canvas{
+	border:1px solid #cccccc;
+	margin:0px;
+	padding:0px;
+
+	}
+	
+#page1 td a{
+	color:#000000;
+	text-decoration:none;
+	}
+
+#page1 td a:hover{
+	color:#000000;
+	text-decoration:underline;
+	}
+.equal-three-col td {width: 38%;}
+
+.narrative{
+	height: 100px;
+}
+
+@media print {
+  body {
+	width: 793px;
+	height: 1000px;
+	position: relative;
+	padding: 0px 0px 0px 0px;
+	box-sizing: border-box;
+  }
+  .sigWrappershow {
+  position: relative;
+  clear: both;
+  height: 15px;
+  left: 150px;
+  bottom: 40px;
+  width: 50px;
+}
+
+.padShow {
+  position: relative;
+  width: 375px;
+}
+
+.sigPadshow {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  text-align: center;
+}
+
+}
